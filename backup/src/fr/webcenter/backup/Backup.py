@@ -311,7 +311,7 @@ class Backup(object):
 
         commandService = Command()
         target_dir = "%s/database" % (backupPath)
-        image = "mysql:latest"
+        image = "mariadb:latest"
         logger.info("Dumping the Rancher database '%s' in '%s'", listDatabaseSettings['name'], target_dir)
 
         if os.path.isdir(target_dir) is False:
